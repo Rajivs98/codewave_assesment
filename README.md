@@ -3,7 +3,7 @@ http://localhost:5000/get/check
 
 For Store all products data---->
 http://localhost:5000/get/store_all_data
-[upload file parameter - "file" ]
+[upload file field name - "file" ]
 
 For store fittings by filter cloths----->
 http://localhost:5000/get/store_fitting_data
