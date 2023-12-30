@@ -1,8 +1,9 @@
 Check Server---->
 http://localhost:5000/get/check
 
-For Srore all data---->
+For Store all products data---->
 http://localhost:5000/get/store_all_data
+[upload file parameter - "file" ]
 
 For store fittings by filter cloths----->
 http://localhost:5000/get/store_fitting_data
