@@ -14,9 +14,7 @@ for fetch fittng products --->
 http://localhost:5000/get/all_products
 
 pass body "regular" or "relaxed"
-{
-  "type_of_fit": "regular"  
-}
+{"type_of_fit": "regular"  }
 
 
 For docker use command 
