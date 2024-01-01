@@ -1,7 +1,7 @@
 from ..models.Products import All_Products
 from ..models.fitting import Regular_fit, Relaxed_fit
 # import requests
-from flask import request, jsonify
+from flask import request, jsonify, Response, make_response
 import pandas as pd
 from ..db import db
 import json, csv, re
@@ -121,7 +121,10 @@ class Products:
                 return jsonify(data), 200
             elif fit_type == 'regular':
                 data = Regular_fit.query.all()
-                return jsonify(data), 200
+                # data.headers['Content-Type']='application/json'
+                # data.headers['Access-Control-Allow-Origin'] = '*'
+                return jsonify(data)
+                # return Response(json.dumps(data), mimetype="application/json",), 200
             else:
                 return jsonify({"error": "Invalid fit type"}), 400
         except Exception as e:

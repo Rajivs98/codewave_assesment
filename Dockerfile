@@ -2,14 +2,15 @@ FROM python:3.11-alpine3.18
 WORKDIR /app
 COPY requirements.txt requirements.txt
 # RUN pip install -r requirements.txt
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install --upgrade pip 
+RUN pip install -r requirements.txt
 
 COPY . /app
 # CMD python ./app.py
 ENV FLASK_APP=wsgi.py
 EXPOSE 5000
-CMD ["waitress-serve","--host=0.0.0.0", "--port=5000", "--call" "app:create_app"]
-# CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["flask", "run", "--host=0.0.0.0"]
+# CMD ["waitress-serve","--host=0.0.0.0", "--port=5050", "--call" "app:create_app"]
 
 
 # FROM python:3-alpine3.15
